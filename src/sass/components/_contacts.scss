@@ -1,0 +1,101 @@
+.contacts {
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+
+h3 {
+  @include text (Open Sans, 3.6rem, normall, $red, 3.6rem);
+  margin: 6.5rem 0 4rem 0.8rem;
+}
+
+.contacts-wrap {
+  margin-bottom: 5rem;
+  @include flex (flex, space-between, wrap);
+
+
+
+
+
+}
+
+.card-contact {
+
+  display: inline-flex;
+  margin-top: 2rem;
+  background-color: $bg-color;
+  @include text (Open Sans, 1.4rem, normal, $black, 1.9rem);
+
+  &__bold {
+    @include text(Open Sans, 1.4rem, bold, $black, 1.9rem)
+  }
+
+  &__text {
+    max-width: 37rem;
+    margin-left: 1rem;
+  }
+
+}
+
+.map {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.my-form {
+  max-width: 77.4rem;
+  margin: 0 auto;
+  margin-bottom: 18rem;
+
+  @include text (Open Sans, 1.2rem, normal, $my-black, 1.6rem);
+
+  ::placeholder {
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 1rem;
+  }
+
+  &__my-form-control {
+    height: 6rem;
+
+    &:focus {
+      border: 1px solid $red;
+      box-shadow: 0 0 0 0.2rem $dark-red;
+    }
+
+    &-text {
+      height: 12rem !important;
+    }
+  }
+
+  &__my-button {
+    @include text (Open-Sans, 1.8rem, normal, $white, 1.8rem);
+    letter-spacing: 0.1em;
+    background-color: $red;
+    float: right;
+    padding: 1.8rem 12rem;
+    border: none;
+    margin: 3rem auto;
+    margin-bottom: 3rem;
+
+    &:hover {
+      background-color: $dark-red;
+    }
+
+    &:active {
+      background-color: $red;
+    }
+  }
+
+  &__my-form-check {
+    background-color: greenyellow;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &-label {
+      margin-left: 1rem;
+      margin-top: 0.5rem;
+    }
+  }
+}

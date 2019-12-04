@@ -1,0 +1,128 @@
+.slider-size{
+    // height: 30vh;
+    border: $my-border;
+}
+
+
+.my-prev-icon{
+    background-image: url('/assets/img/prev-icon.png');
+    width: 22px;
+    height: 50px;
+
+}
+.my-next-icon {
+    background-image: url('/assets/img/next-icon.png');
+    width: 22px;
+    height: 50px;
+
+}
+
+.my-indicators-color{
+ bottom: -5rem;
+
+li {
+ background-color: $red;
+ width: 15px;
+ height: 15px;
+ border-radius: 50%;
+}
+}
+
+
+
+h2{
+    text-align: center;
+    @include text (Open Sans, 3.6rem, bold, $red, 3.6rem);
+    letter-spacing: 0.1em;
+    margin: 9rem 0 3.2rem;
+
+}
+
+.indent {
+    margin-top: 15rem;
+}
+
+// ...................rose cards............................../////
+
+
+.no-padding {
+    padding: 0;
+}
+
+
+// comments
+.comment {
+    margin-top: 3rem;
+    max-width: 33.4rem;
+    min-height: 31.9rem;
+    padding: 3rem;
+    border: 1px solid #B0BEC5;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+    @include text (Open-Sans, 1.2rem, normal, $my-black, 2.8rem);
+    margin-bottom: 4.5rem;
+ 
+    
+
+
+&__name{
+    @include text (Open-Sans, 1.8rem, bold, $black, 1.8rem);
+    font-style: italic;
+    letter-spacing: 0.075em;
+}
+
+
+
+&__text{
+    @include text (Open-Sans, 1.8rem, normal, $my-black, 1.8rem);
+
+}
+
+&__box{
+    @include flex (flex, space-between, no-wrap);
+}
+}
+
+
+.all-comments{
+    max-width: 400px;
+    margin: 0 auto;
+display: flex;
+justify-content: center;
+&__my-button{
+        @include text (Open-Sans, 1.8rem, normal, $red, 1.8rem);
+        letter-spacing: 0.1em;
+        background-color: $bg-color;
+        border: 1px solid $red;
+        padding: 1.8rem 12rem;
+        margin: 0 auto;
+        &:hover{
+            background-color: $red;
+        }
+
+    }
+
+}
+
+.advantage-card{
+    border: 1px solid $red;
+    max-width: 33.4rem;
+    min-height: 31.9rem;
+    @include text (Open-Sans, 1.8rem, normal, $black, 2.5rem);
+    padding: 4.6rem 2rem;
+    text-align: center;
+
+    &__img{
+        margin: 0 auto;
+    }
+    &__tittle{
+        color: $red;
+        margin: 2.5rem 0 1.3rem;
+        letter-spacing: 0.1em;
+    }
+    
+    
+}
+
+
+

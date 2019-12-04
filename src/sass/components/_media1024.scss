@@ -1,0 +1,32 @@
+@media (max-width: 1440px) {
+
+
+
+
+    html, body {
+        font-size: 58%;
+        
+    }
+    .special-offer{
+        font-size: 1.7rem;
+    }
+    .information{
+        &__icons{
+            display: block;
+        }
+    }
+
+    .my-nav li {
+       
+        margin-right: 2rem;
+    }
+
+    .indent {
+        margin-top: 11rem;
+    }
+
+    .nav-footer{
+        max-width: 92%;
+    }
+    
+}

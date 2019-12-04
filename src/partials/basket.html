@@ -1,0 +1,146 @@
+<div class="basket-wrap">
+    <h3>МОЯ КОРЗИНА</h3>
+    <p class="basket">Товары в корзине</p>
+
+    <!-- <div class="container">
+        <div class="row my-row">
+            <div class="col-xs-6 col-lg-6">
+                <p class="basket__tittle">Товары</p>
+            </div>
+
+
+            <div class="col-xs-6 col-lg-2">
+                <p class="basket__tittle">Цена</p>
+            </div>
+
+
+            <div class="col-xs-2 col-lg-2">
+                <p class="basket__tittle">Количество</p>
+            </div>
+
+
+            <div class="col-xs-2 col-lg-2">
+                <p class="basket__tittle">Сумма</p>
+            </div>
+        </div>
+
+    </div> -->
+
+    <table class="table my-table">
+        <thead>
+            <tr class="my-row">
+                <th scope="col">Товары</th>
+                <th scope="col">Цена</th>
+                <th scope="col">Колличество</th>
+                <th scope="col">сумма</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="container">
+            <partial src="basket-product.html"></partial>
+            <partial src="basket-product.html"></partial>
+            <partial src="basket-product.html"></partial>
+        </tbody>
+    </table>
+
+    <!-- .............................................................. -->
+    <form class="checkout">
+
+        <div class="services">
+            <div class="services__item form-group">
+                <img src="./assets/img/flBasket.png" alt="" class="services__img">
+                <input type="checkbox" class="services__checkbox" id="free-card">
+                <label for="free-card" class="services__label">Добавить открытку (бесплатно)</label>
+            </div>
+            <div class="services__item form-group">
+                <img src="./assets/img/instagram-red.png" alt="" class="services__img">
+                <input type="checkbox" class="services__checkbox" id="take-picture">
+                <label for="take-picture" class="services__label">Сделать фото при получении</label>
+            </div>
+        </div>
+
+        <div class="price-for-products-wrap">
+            <div class="price-for-products">Всего товаров на сумму:
+                <div class="price-for-products__bold">10800р.</div>
+            </div>
+        </div>
+
+        <h4 class="delivery-tittle">Доставка</h4>
+
+        <div class="checkout__block">
+
+            <div class="form-check checkout__line">
+                <input class="form-check-input" type="radio" name="Radios" id="Radios1" value="option1" checked>
+                <label class="form-check-label checkout__label" for="Radios1">
+                    Не требуется (самовывоз) </label>
+            </div>
+
+
+            <div class="form-check checkout__line">
+                <input class="form-check-input" type="radio" name="Radios" id="Radios2" value="option2" checked>
+                <label class="form-check-label checkout__label" for="Radios2">
+                    Город - 250 р.</label>
+            </div>
+
+
+            <div class="form-check checkout__line">
+                <input class="form-check-input" type="radio" name="Radios" id="Radios3" value="option3" checked>
+                <label class="form-check-label checkout__label" for="Radios3">
+                    Ростоши, Южный, Авиагородок, Кушкуль - 350 р. </label>
+            </div>
+
+
+            <div class="form-check checkout__line">
+                <input class="form-check-input" type="radio" name="Radios" id="Radios4" value="option4" checked>
+                <label class="form-check-label checkout__label" for="Radios4">
+                    Юж.Урал, 9 Января, Ивановка, Пригородны - 400 р.</label>
+            </div>
+
+
+            <div class="form-check checkout__line">
+                <input class="form-check-input" type="radio" name="Radios" id="Radios5" value="option5" checked>
+                <label class="form-check-label checkout__label" for="Radios5">
+                    Нежинка, Экодолье, х. Степановский, п. Ленина - 450 р. </label>
+            </div>
+
+
+            <div class="form-check checkout__line">
+                <input class="form-check-input" type="radio" name="Radios" id="Radios6" value="option6" checked>
+                <label class="form-check-label checkout__label" for="Radios6">
+                    Аэропорт, Благословенка, П. Покровка - 550 р.</label>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="price-for-products-wrap">
+            <div class="price-for-products">Общая стоимость заказа:
+                <div class="price-for-products__bold">11500р.</div>
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary checkout__my-button">ОФОРМИТЬ ЗАКАЗ</button>
+
+    </form>
+
+
+    <!-- .............................................................. -->
+    <h2 class="special-high">РЕКОМЕНДУЕМ</h2>
+    <div class="container">
+        <div class="row">
+            <partial src="card.html"></partial>
+            <partial src="card.html"></partial>
+            <partial src="card.html"></partial>
+
+
+        </div>
+    </div>
+
+
+</div>
