@@ -1,45 +1,48 @@
 @media (max-width: 992px) {
-   html, body{
+
+    html,
+    body {
         font-size: 48.5%;
     }
 
-    .special-offer{
+    .special-offer {
         font-size: 2rem;
     }
 
-    .information{
+    .information {
         width: 100%;
     }
+
     span {
         display: block;
     }
-  
 
-    .rose-card__number{
+
+    .rose-card__number {
         font-size: 2.5rem;
         line-height: 2.5rem;
     }
 
-    .rose-card__price{
+    .rose-card__price {
         font-size: 3rem;
         line-height: 3rem;
         padding-bottom: 2rem;
 
     }
 
-    .rose-card__booking{
+    .rose-card__booking {
         font-size: 2.2rem;
         line-height: 2.2rem;
         padding: 1rem 5.5rem;
 
     }
 
-    .rose-card__description{
+    .rose-card__description {
         font-size: 2.4rem;
         line-height: 2.4rem;
     }
 
-    .rose-card__img{
+    .rose-card__img {
         width: 29rem;
         height: 28rem;
     }
@@ -48,18 +51,22 @@
         margin-top: 15rem;
     }
 
-    .comment{
-        &__data{
-            font-size: 2rem;
+    .comment {
+        padding: 2rem;
+
+        &__data {
+            font-size: 1.5rem;
             line-height: 2rem;
         }
-        &__name{
+
+        &__name {
             font-size: 2.5rem;
             line-height: 2.5rem;
 
 
         }
-        &__adress{
+
+        &__adress {
             font-size: 2rem;
             line-height: 2.5rem;
 
@@ -67,7 +74,7 @@
 
         }
 
-        &__text{
+        &__text {
             font-size: 2.5rem;
             line-height: 2.5rem;
 
@@ -75,53 +82,115 @@
         }
     }
 
-    .all-comments__my-button{
-        font-size: 2.8rem;
-        line-height: 2.8rem;
 
-    }
 
-    .advantage-card{
+    .advantage-card {
         font-size: 2.5rem;
         line-height: 2.5rem;
         min-height: 43.9rem;
 
     }
 
-    
 
-    
 
-    .nav-footer{
+    .fixed {
+        position: fixed;
+        padding-right: 2rem;
+        padding-left: 5rem;
+        top: -2.5rem;
+        right: -1rem;
+        z-index: 4000;
+        background-color: $red !important;
+        color: $white !important;
+        background: url(/assets/img/white-b.png) no-repeat 4px 4px;
+        background-size: 2rem;
+
+        a {
+            color: $white;
+        }
+    }
+
+
+    .nav-footer {
         max-width: 90%;
     }
+
     .my-indicators-color {
         bottom: -6rem;
     }
+
     .networks {
         margin-top: 2.1rem;
     }
 
-.my-column {
-    // width: 15.4rem;
-    max-width: 22.4rem;
-}
-.delivery__items{
+    .my-column {
+        // width: 15.4rem;
+        max-width: 22.4rem;
+    }
+
+    .delivery__items {
         margin-top: 1.7rem;
     }
-    .display-block{
+
+    .display-block {
         display: block;
         font-size: 1.8rem;
     }
-    .my-ul{
+
+    .my-ul {
         margin-top: 3rem;
     }
 
     .my-nav {
-        .mobile-hide{
-        display: none;
+        padding-left: 2rem;
+
+        .ipad-visible {
+            display: block;
+        }
     }
-}
+
+
+    // ///////////////////////////////////////////////////////////////////
+    .bold {
+        display: inline;
+    }
+
+    .changed-product-box {
+        display: block;
+
+    }
+
+    .changed-product {
+        display: block;
+        margin: 0 auto;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .slider-for-sidebar {
+        width: 100%;
+        order: 3;
+    }
+
+    .slider-for-product {
+        width: 100%;
+        order: 1;
+    }
+
+    .inf-product {
+        width: 70%;
+        margin: 2rem auto;
+    }
+
+    .name-product {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+
 
 
 }

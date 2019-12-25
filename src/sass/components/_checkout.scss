@@ -1,0 +1,154 @@
+.checkout-box {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.delivery-box {
+    padding: 2rem 1rem 2.5rem 1rem;
+    @include text(Open Sans, 2rem, normal, $my-black, 2rem);
+
+    &__price {
+        padding: 2rem 1rem 2.5rem 1rem;
+    }
+}
+
+h4 {
+    @include text(Open Sans, 2.4rem, normal, $my-black, 2rem);
+    margin: 6rem 1rem 2rem 1rem;
+}
+
+.my-second-form {
+    padding: 0 2rem;
+
+    @include text(Open Sans, 1.8rem, normal, $my-black, 1.6rem);
+
+    &__control {
+        @extend .my-form__my-form-control;
+        @include text(Open Sans, 1.8rem, normal, $my-black, 1.6rem);
+        height: 5rem !important;
+    }
+}
+
+.payment-box {
+    @include flex(flex, space-between, wrap);
+    // max-width: 768px;
+
+    margin: 2rem auto;
+    font-weight: bold;
+
+    &__line {
+        @extend .checkout__line;
+    }
+
+    &__block {
+        margin: 1rem;
+    }
+
+    &__button {
+        color: $red;
+        font-size: 2.2rem;
+        border: 1px solid $red;
+        padding: 1rem 3rem;
+        background-color: $white;
+        margin: 1rem 1.5rem;
+        transition: $light;
+
+        &:hover {
+            background-color: $red;
+            color: $white;
+        }
+    }
+
+    &__question {
+        background-color: $red;
+        color: $white;
+        border-radius: 50%;
+        font-size: 3.6rem;
+        padding: 0 1rem !important;
+        transition: $light;
+
+        &:hover {
+            background-color: $dark-red;
+            color: $white;
+        }
+    }
+
+    .code {
+        width: 17.6rem;
+        margin: 1.3rem;
+    }
+}
+
+.block-inline {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.button-box {
+    padding-top: 1.3rem;
+}
+
+.display-inline-block {
+    display: table;
+}
+
+// /////////////////////////////////////////////////////////
+
+
+.slider {
+    width: 50%;
+    margin: 0 auto;
+
+}
+
+.slick-slide {
+    margin: 0px 20px;
+    margin-bottom: 2rem;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-slide {
+    transition: all ease-in-out 0.3s;
+    opacity: 0.2;
+}
+
+.slick-active {
+    opacity: 1;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+.comment-slider {
+    width: 93%;
+    margin-top: 3rem;
+}
+
+.relative-for-button {
+    position: relative;
+
+}
+
+.prev-button {
+    position: absolute;
+    z-index: 1000;
+    top: 14rem;
+    left: 2rem;
+}
+
+.next-button {
+    position: absolute;
+    z-index: 1000;
+    top: 14rem;
+    right: 2rem;
+
+}

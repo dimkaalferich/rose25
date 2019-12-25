@@ -3,21 +3,24 @@
 
 
 
-    html, body {
+    html,
+    body {
         font-size: 58%;
-        
+
     }
-    .special-offer{
+
+    .special-offer {
         font-size: 1.7rem;
     }
-    .information{
-        &__icons{
+
+    .information {
+        &__icons {
             display: block;
         }
     }
 
     .my-nav li {
-       
+
         margin-right: 2rem;
     }
 
@@ -25,8 +28,53 @@
         margin-top: 11rem;
     }
 
-    .nav-footer{
-        max-width: 92%;
+
+    .nav-footer {
+        max-width: 68%;
     }
-    
+
+    // //////////////////////////////////////
+    .changed-big-img {
+        width: 52rem;
+    }
+
+    .inf-product {
+        width: 25%;
+    }
+
+    .my-button--white {
+        padding: 1.8rem 7rem;
+    }
+
+    .name-product {
+        font-size: 2.8rem;
+    }
+
+    .new-price {
+        font-size: 3rem;
+    }
+
+    .product-number {
+        font-size: 2rem;
+    }
+
+    .description-product {
+
+        margin-top: -2.5rem;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+    }
+
+    .constitute {
+
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+
+        &:before {
+            margin-top: 2rem;
+
+        }
+
+    }
+
 }

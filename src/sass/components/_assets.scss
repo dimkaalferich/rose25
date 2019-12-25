@@ -1,5 +1,8 @@
-html, body {
+html,
+body {
     font-size: 62.5%;
+    font-family: Open Sans;
+    position: relative;
 }
 
 // colors
@@ -9,8 +12,10 @@ $dark-red: #8b0000;
 $green: #028B0B;
 $black: black;
 $my-black: #343434;
-$bg-color: #eee;
+$bg-color: white;
 $grey:rgba(196, 196, 196, 0.31);
+$pink: #FF499F;
+$light-green: #19AC23;
 
 
 
@@ -19,32 +24,33 @@ $grey:rgba(196, 196, 196, 0.31);
 $my-border: solid 2px $black;
 $light: all .5s linear;
 $bg-form: no-repeat /cover center;
-$my-shadow: 0 0 5px $white, 3px 3px 5px rgba(0, 0, 0, .5);
+$my-shadow: 0 0 5px $white,
+3px 3px 5px rgba(0, 0, 0, .5);
 
 
 
 // mixins
 
-    @mixin text ($family, $size, $weight, $color, $height) {
-        font-family: $family;
-        font-size: $size;
-        font-weight: $weight;
-        color: $color;
-        line-height: $height;
-    }
+@mixin text ($family, $size, $weight, $color, $height) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    line-height: $height;
+}
 
-    @mixin absolute ( $position, $left, $top, $z-index) {
-        position: $position;
-        left: $left;
-        top: $top;
-        z-index: $z-index;
-    }
+@mixin absolute ($position, $left, $top, $z-index) {
+    position: $position;
+    left: $left;
+    top: $top;
+    z-index: $z-index;
+}
 
-    @mixin flex ($display, $j-content, $wrap) {
-        display: $display;
-        justify-content: $j-content;
-        flex-wrap: $wrap;
-    }
+@mixin flex ($display, $j-content, $wrap) {
+    display: $display;
+    justify-content: $j-content;
+    flex-wrap: $wrap;
+}
 
 // fonts
 

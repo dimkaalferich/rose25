@@ -1,0 +1,73 @@
+<a href="changed-product.html">
+    <div class="col-xs-12 col-sm-4 col-lg-4  no-padding">
+        <div class="relative-for-card">
+            <div class="rose-card">
+                <div class="card rose-card__wrap">
+                    <!--  <div class="rose-card__content"> -->
+                    <div class="rose-card__img">
+                        <img class="rose-card__img" src="./assets/img/production-rose.png" class="card-img-top"
+                            alt="production rose" />
+                        <div class="sale best-price">лучшая цена</div>
+                    </div>
+                    <div class="card-body rose-card__box">
+                        <h5 class="card-title rose-card__number">101 роза</h5>
+                        <p class="card-text rose-card__price">2999р</p>
+                        <!-- </div> -->
+                    </div>
+                    <div class="rose-card__hover-content">
+                        <a href="checkout.html" class="rose-card__booking">ЗАКАЗАТЬ</a>
+                        <button type="button" class="btn rose-card__description" data-toggle="modal"
+                            data-target="#exampleModalCenter">
+                            Купить в один клик
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body modal-width">
+                <div class="my-modal">
+                    <p class="my-modal__inf">
+                        Введиде пожалуйста Ваши данные в форму ниже, для того, чтобы нам
+                        менеждер смог всязаться с Вами для быстрого оформления заказа
+                    </p>
+
+                    <h3 class="my-modal__tittle">маркиза</h3>
+                </div>
+
+                <form action="checkout.html" class="my-form modal-form">
+                    <div class="form-group">
+                        <label for="InputName"></label>
+                        <input type="text" class="form-control my-form__my-form-control" id="InputName"
+                            aria-describedby="nameHelp" placeholder="Ваше имя" />
+                    </div>
+                    <div class="form-group">
+                        <label for="InputNumber"></label>
+                        <input type="tel" class="form-control my-form__my-form-control" id="InputNumber"
+                            aria-describedby="numberHelp" placeholder="Ваш номер телефона" />
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label my-form__my-form-check-label" for="exampleCheck1">
+                            <input type="checkbox" class="form-check-input my-form__my-form-check" id="exampleCheck1" />
+                            <div class="custom-checkbox"></div>
+                            Я ознакомлен и согласен с политикой конфиденциальности
+                        </label>
+                    </div>
+                    <div class="button-box-center">
+                        <button type="submit" class="btn my-button">ОФОРМИТЬ ЗАКАЗ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

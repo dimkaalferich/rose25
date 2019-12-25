@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="./assets/img/rose.png">
+        <title>корзина</title>
+    </head>
+    
+    <body>
+        <div class="header">
+            <div id="progressbar"></div>
+            <header>
+                <div class="special-offer"> <a href="#" class="to-close">&times</a>
+                    <div class="special-offer__width">СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ ДЛЯ КОРПОРАТИВНЫХ КЛИЕНТОВ</div>
+                </div>
+                <div class="information">
+                    <div class="information__items"> <a href="index.html" class="information__link">
+
+                    <img class="information__logo" src="./assets/img/logo.png" alt="logo Rose25"></a>
+                    </div>
+                    <div class="information__items  information__items-mobile">
+                        <div class="information__text">Выберите город:</div> <span class="information__icons information__icons-city">
+
+                    <div class="check-city-block check-city-block--icon sticky-top">
+
+
+
+                        <select class="check-city">
+
+                            <option class="check-city__city">Оренбург</option>
+
+                            <option class="check-city__city">Уфа</option>
+
+                        </select multiple>
+
+                    </div>
+
+                </span>
+                    </div>
+                    <div class="information__items information__items-mobile">
+                        <div class="information__text">Круглосуточная доставка</div> <a href="tel:+7 (3532) 452-255" class="information__icons information__icons-phone">+7 (3532)
+
+                    452-255</a> <a href="tel:+7 (3532) 452-255" class="information__icons information__icons-phone">+7 (3532)
+
+                    452-255</a>
+                    </div>
+                    <div class="information__items information__items-bottom"> <span class="information__icons information__icons-basket"> <a href="basket.html">2340 руб.</a> </span>
+                    </div>
+                </div>
+        </div>
+        <nav class="my-nav navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <!-- <div class="container"> -->
+            <button class=" no-border navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+                <img class="burger" id="burger" src="./assets/img/burger.png" alt="">
+            </button>
+            <div class="navbar-brand mobile-hide box"> <a class="display-block" href="tel:+7 (3532) 452-255"> +7 (3532) 452-255</a>
+
+                <a
+                class="display-block" href="tel:+7 (3532) 452-255">+7 (3532) 452-255</a>
+            </div>
+            <div class="navbar-brand mobile-hide">
+                <select class="check-city check-city--nav">
+                    <option class="check-city__city check-city__city--nav">Оренбург</option>
+                    <option class="check-city__city check-city__city--nav">Уфа</option>
+                </select>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class=" my-ul navbar-nav mr-auto w-100 justify-content-center">
+                    <li class="nav-item"> <a class="nav-link active" href="#">АКЦИИ</a>
+
+                    </li>
+                    <li class="nav-item"> <a class="nav-link active" href="catalog.html">КАТАЛОГИ ЦВЕТОВ</a>
+
+                    </li>
+                    <li class="nav-item"> <a class="nav-link active" href="#">БУКЕТЫ И КОМПОЗИЦИИ</a>
+
+                    </li>
+                    <li class="nav-item"> <a class="nav-link active" href="#">СВАДЕБНЫЕ БУКЕТЫ</a>
+
+                    </li>
+                    <li class="nav-item active"> <a class="nav-link" href="#">ПОДАРКИ</a>
+
+                    </li>
+                    <div class="hidden-ul mobile-hide ipad-visible">
+                        <li class="nav-item little-margin"> <a class="nav-link active" href="#">О компании</a>
+
+                        </li>
+                        <li class="nav-item little-margin"> <a class="nav-link active" href="#">Оплата и доставка</a>
+
+                        </li>
+                        <li class="nav-item little-margin"> <a class="nav-link active" href="contacts.html">Контакты</a>
+
+                        </li>
+                        <li class="nav-item little-margin"> <a class="nav-link active" href="#">Реквизиты</a>
+
+                        </li>
+                        <li class="nav-item little-margin"> <a class="nav-link active" href="#">Отзывы</a>
+
+                        </li>
+                        <li class="nav-item little-margin"> <a class="nav-link active" href="#">Для корпоративных клиентов</a>
+
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <!-- </div> -->
+        </nav>
+        <div class="basket-wrap">
+             <h3>МОЯ КОРЗИНА</h3>
+
+            <p class="basket">Товары в корзине</p>
+            <table class="table my-table">
+                <thead>
+                    <tr class="my-row">
+                        <th scope="col">Товары</th>
+                        <th scope="col">Цена</th>
+                        <th scope="col">Колличество</th>
+                        <th scope="col">сумма</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="container">
+                    <tr class=" my-underline-row">
+                        <th class="" scope="row">
+                            <div class="basket-product">
+                                <img src="./assets/img/basket-product.png" alt="" class="basket-product__img">
+                                <div class="basket-product__text">101 роза</div>
+                            </div>
+                        </th>
+                        <td>
+                            <div class=" basket-product__price">2999p</div>
+                        </td>
+                        <td>
+                            <div class="basket-product__number">
+                                <button class="decrease">
+                                    < </button>
+                                        <input type="number" id="number" class=" number" min="1" value="1"></input>
+                                        <button class="increase">></button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class=" basket-product__all-price">2999p</div>
+                        </td>
+                        <td> <a href="" class="col-xs-2 basket-product__close"> &times
+        </a>
+
+                        </td>
+                    </tr>
+                    <tr class=" my-underline-row">
+                        <th class="" scope="row">
+                            <div class="basket-product">
+                                <img src="./assets/img/basket-product.png" alt="" class="basket-product__img">
+                                <div class="basket-product__text">101 роза</div>
+                            </div>
+                        </th>
+                        <td>
+                            <div class=" basket-product__price">2999p</div>
+                        </td>
+                        <td>
+                            <div class="basket-product__number">
+                                <button class="decrease">
+                                    < </button>
+                                        <input type="number" id="number" class=" number" min="1" value="1"></input>
+                                        <button class="increase">></button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class=" basket-product__all-price">2999p</div>
+                        </td>
+                        <td> <a href="" class="col-xs-2 basket-product__close"> &times
+        </a>
+
+                        </td>
+                    </tr>
+                    <tr class=" my-underline-row">
+                        <th class="" scope="row">
+                            <div class="basket-product">
+                                <img src="./assets/img/basket-product.png" alt="" class="basket-product__img">
+                                <div class="basket-product__text">101 роза</div>
+                            </div>
+                        </th>
+                        <td>
+                            <div class=" basket-product__price">2999p</div>
+                        </td>
+                        <td>
+                            <div class="basket-product__number">
+                                <button class="decrease">
+                                    < </button>
+                                        <input type="number" id="number" class=" number" min="1" value="1"></input>
+                                        <button class="increase">></button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class=" basket-product__all-price">2999p</div>
+                        </td>
+                        <td> <a href="" class="col-xs-2 basket-product__close"> &times
+        </a>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- .............................................................. -->
+            <form action="checkout.html" class="checkout">
+                <div class="services">
+                    <div class="services__item form-group">
+                        <label for="free-card" class="services__label">
+                            <img src="./assets/img/flBasket.png" alt="" class="services__img">
+                            <input type="checkbox" class="services__checkbox" id="free-card">
+                            <div class="custom-checkbox"></div>Добавить открытку (бесплатно)</label>
+                    </div>
+                    <div class="services__item form-group">
+                        <label for="take-picture" class="services__label">
+                            <img src="./assets/img/instagram-red.png" alt="" class="services__img">
+                            <input type="checkbox" class="services__checkbox" id="take-picture">
+                            <div class="custom-checkbox"></div>Сделать фото при получении</label>
+                    </div>
+                </div>
+                <div class="price-for-products-wrap">
+                    <div class="price-for-products">Всего товаров на сумму:
+                        <div class="price-for-products__bold">10800р.</div>
+                    </div>
+                </div>
+                 <h4 class="delivery-tittle">Доставка</h4>
+
+                <div class="checkout__block">
+                    <div class="form-check checkout__line">
+                        <label class="form-check-label checkout__label" for="Radios1">
+                            <input class="form-check-input" type="radio" name="Radios" id="Radios1"
+                            value="option1" checked>
+                            <div class="custom-radio"></div>Не требуется (самовывоз)</label>
+                    </div>
+                    <div class="form-check checkout__line">
+                        <label class="form-check-label checkout__label" for="Radios2">
+                            <input class="form-check-input" type="radio" name="Radios" id="Radios2"
+                            value="option2">
+                            <div class="custom-radio"></div>Город - 250 р.</label>
+                    </div>
+                    <div class="form-check checkout__line">
+                        <label class="form-check-label checkout__label" for="Radios3">
+                            <input class="form-check-input" type="radio" name="Radios" id="Radios3"
+                            value="option3" c>
+                            <div class="custom-radio"></div>Ростоши, Южный, Авиагородок, Кушкуль - 350 р.</label>
+                    </div>
+                    <div class="form-check checkout__line">
+                        <label class="form-check-label checkout__label" for="Radios4">
+                            <input class="form-check-input" type="radio" name="Radios" id="Radios4"
+                            value="option4">
+                            <div class="custom-radio"></div>Юж.Урал, 9 Января, Ивановка, Пригородны - 400 р.</label>
+                    </div>
+                    <div class="form-check checkout__line">
+                        <label class="form-check-label checkout__label" for="Radios5">
+                            <input class="form-check-input" type="radio" name="Radios" id="Radios5"
+                            value="option5">
+                            <div class="custom-radio"></div>Нежинка, Экодолье, х. Степановский, п. Ленина - 450 р.</label>
+                    </div>
+                    <div class="form-check checkout__line">
+                        <label class="form-check-label checkout__label" for="Radios6">
+                            <input class="form-check-input" type="radio" name="Radios" id="Radios6"
+                            value="option6">
+                            <div class="custom-radio"></div>Аэропорт, Благословенка, П. Покровка - 550 р.</label>
+                    </div>
+                </div>
+                <div class="price-for-products-wrap">
+                    <div class="price-for-products">Общая стоимость заказа:
+                        <div class="price-for-products__bold">11500р.</div>
+                    </div>
+                </div>
+                <div class="button-box-right">
+                    <button type="submit" class="btn my-button">ОФОРМИТЬ ЗАКАЗ</button>
+                </div>
+            </form>
+            <!-- .............................................................. -->
+             <h2 class="special-high">РЕКОМЕНДУЕМ</h2>
+
+            <div class="container">
+                <div class="row"> <a href="changed-product.html">
+    <div class="col-xs-12 col-sm-4 col-lg-4  no-padding">
+        <div class="relative-for-card">
+            <div class="rose-card">
+                <div class="card rose-card__wrap">
+                    <!--  <div class="rose-card__content"> -->
+                    <div class="rose-card__img">
+                        <img class="rose-card__img" src="./assets/img/production-rose.png" class="card-img-top"
+                            alt="production rose" />
+                        <div class="sale best-price">лучшая цена</div>
+                    </div>
+                    <div class="card-body rose-card__box">
+                        <h5 class="card-title rose-card__number">101 роза</h5>
+                        <p class="card-text rose-card__price">2999р</p>
+                        <!-- </div> -->
+                    </div>
+                    <div class="rose-card__hover-content">
+                        <a href="checkout.html" class="rose-card__booking">ЗАКАЗАТЬ</a>
+
+                    <button
+                    type="button" class="btn rose-card__description" data-toggle="modal" data-target="#exampleModalCenter">Купить в один клик</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </a>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+
+                        </button>
+                    </div>
+                    <div class="modal-body modal-width">
+                        <div class="my-modal">
+                            <p class="my-modal__inf">Введиде пожалуйста Ваши данные в форму ниже, для того, чтобы нам менеждер
+                                смог всязаться с Вами для быстрого оформления заказа</p>
+                             <h3 class="my-modal__tittle">маркиза</h3>
+
+                        </div>
+                        <form action="checkout.html" class="my-form modal-form">
+                            <div class="form-group">
+                                <label for="InputName"></label>
+                                <input type="text" class="form-control my-form__my-form-control"
+                                id="InputName" aria-describedby="nameHelp" placeholder="Ваше имя" />
+                            </div>
+                            <div class="form-group">
+                                <label for="InputNumber"></label>
+                                <input type="tel" class="form-control my-form__my-form-control"
+                                id="InputNumber" aria-describedby="numberHelp" placeholder="Ваш номер телефона"
+                                />
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label my-form__my-form-check-label" for="exampleCheck1">
+                                    <input type="checkbox" class="form-check-input my-form__my-form-check"
+                                    id="exampleCheck1" />
+                                    <div class="custom-checkbox"></div>Я ознакомлен и согласен с политикой конфиденциальности</label>
+                            </div>
+                            <div class="button-box-center">
+                                <button type="submit" class="btn my-button">ОФОРМИТЬ ЗАКАЗ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> <a href="changed-product.html">
+    <div class="col-xs-12 col-sm-4 col-lg-4  no-padding">
+        <div class="relative-for-card">
+            <div class="rose-card">
+                <div class="card rose-card__wrap">
+                    <!--  <div class="rose-card__content"> -->
+                    <div class="rose-card__img">
+                        <img class="rose-card__img" src="./assets/img/production-rose.png" class="card-img-top"
+                            alt="production rose" />
+                        <div class="sale new">новинка</div>
+                    </div>
+                    <div class="card-body rose-card__box">
+                        <h5 class="card-title rose-card__number">101 роза</h5>
+                        <p class="card-text rose-card__price">2999р</p>
+                        <!-- </div> -->
+                    </div>
+                    <div class="rose-card__hover-content">
+                        <a href="checkout.html" class="rose-card__booking">ЗАКАЗАТЬ</a>
+
+        <button
+        type="button" class="btn rose-card__description" data-toggle="modal" data-target="#exampleModalCenter">Купить в один клик</button>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </a>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+
+                            </button>
+                        </div>
+                        <div class="modal-body modal-width">
+                            <div class="my-modal">
+                                <p class="my-modal__inf">Введиде пожалуйста Ваши данные в форму ниже, для того, чтобы нам менеждер
+                                    смог всязаться с Вами для быстрого оформления заказа</p>
+                                 <h3 class="my-modal__tittle">маркиза</h3>
+
+                            </div>
+                            <form action="checkout.html" class="my-form modal-form">
+                                <div class="form-group">
+                                    <label for="InputName"></label>
+                                    <input type="text" class="form-control my-form__my-form-control"
+                                    id="InputName" aria-describedby="nameHelp" placeholder="Ваше имя" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="InputNumber"></label>
+                                    <input type="tel" class="form-control my-form__my-form-control"
+                                    id="InputNumber" aria-describedby="numberHelp" placeholder="Ваш номер телефона"
+                                    />
+                                </div>
+                                <div class="form-group form-check">
+                                    <label class="form-check-label my-form__my-form-check-label" for="exampleCheck1">
+                                        <input type="checkbox" class="form-check-input my-form__my-form-check"
+                                        id="exampleCheck1" />
+                                        <div class="custom-checkbox"></div>Я ознакомлен и согласен с политикой конфиденциальности</label>
+                                </div>
+                                <div class="button-box-center">
+                                    <button type="submit" class="btn my-button">ОФОРМИТЬ ЗАКАЗ</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> <a href="changed-product.html">
+    <div class="col-xs-12 col-sm-4 col-lg-4  no-padding">
+        <div class="relative-for-card">
+            <div class="rose-card">
+                <div class="card rose-card__wrap">
+                    <!--  <div class="rose-card__content"> -->
+                    <div class="rose-card__img">
+                        <img class="rose-card__img" src="./assets/img/production-rose.png" class="card-img-top"
+                            alt="production rose" />
+                        <div class="sale best-price">лучшая цена</div>
+                    </div>
+                    <div class="card-body rose-card__box">
+                        <h5 class="card-title rose-card__number">101 роза</h5>
+                        <p class="card-text rose-card__price">2999р</p>
+                        <!-- </div> -->
+                    </div>
+                    <div class="rose-card__hover-content">
+                        <a href="checkout.html" class="rose-card__booking">ЗАКАЗАТЬ</a>
+
+            <button
+            type="button" class="btn rose-card__description" data-toggle="modal" data-target="#exampleModalCenter">Купить в один клик</button>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </a>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+
+                                </button>
+                            </div>
+                            <div class="modal-body modal-width">
+                                <div class="my-modal">
+                                    <p class="my-modal__inf">Введиде пожалуйста Ваши данные в форму ниже, для того, чтобы нам менеждер
+                                        смог всязаться с Вами для быстрого оформления заказа</p>
+                                     <h3 class="my-modal__tittle">маркиза</h3>
+
+                                </div>
+                                <form action="checkout.html" class="my-form modal-form">
+                                    <div class="form-group">
+                                        <label for="InputName"></label>
+                                        <input type="text" class="form-control my-form__my-form-control"
+                                        id="InputName" aria-describedby="nameHelp" placeholder="Ваше имя" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputNumber"></label>
+                                        <input type="tel" class="form-control my-form__my-form-control"
+                                        id="InputNumber" aria-describedby="numberHelp" placeholder="Ваш номер телефона"
+                                        />
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <label class="form-check-label my-form__my-form-check-label" for="exampleCheck1">
+                                            <input type="checkbox" class="form-check-input my-form__my-form-check"
+                                            id="exampleCheck1" />
+                                            <div class="custom-checkbox"></div>Я ознакомлен и согласен с политикой конфиденциальности</label>
+                                    </div>
+                                    <div class="button-box-center">
+                                        <button type="submit" class="btn my-button">ОФОРМИТЬ ЗАКАЗ</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                <footer class="footer">
+                    <ul class="nav-footer mobile-display-none">
+                        <li class="nav__links"><a class="links" href="#">АКЦИИ</a>
+
+                        </li>
+                        <li class="nav__links"><a class="links" href="#">КАТАЛОГ ЦВЕТОВ</a>
+
+                        </li>
+                        <li class="nav__links"><a class="links" href="#">БУКЕТЫ И КОМПОЗИЦИИ</a>
+
+                        </li>
+                        <li class="nav__links"><a class="links" href="#">СВАДЕБНЫЕ БУКЕТЫ</a>
+
+                        </li>
+                        <li class="nav__links"><a class="links" href="#">ПОДАРКИ</a>
+
+                        </li>
+                    </ul>
+                    <div class="container">
+                        <div class="row">
+                            <!-- first -->
+                            <div class="col-xs-12 col-lg-3 my-column">
+                                <ul class="about-company mobile-display-none">
+                                    <li class="points"> <a href="#">О компании</a>
+
+                                    </li>
+                                    <li class="about-company__points"> <a href="#">Оплата и доставка</a> 
+                                    </li>
+                                    <li class="about-company__points"> <a href="contacts.html">Контакты</a> 
+                                    </li>
+                                    <li class="about-company__points"> <a href="#">Реквизиты</a> 
+                                    </li>
+                                    <li class="about-company__points"> <a href="#">Отзывы</a> 
+                                    </li>
+                                    <li class="about-company__points"> <a href="#">Для корпоративных клиентов</a> 
+                                    </li>
+                                </ul>
+                                <div class="networks"> <a href="#" class="networks__links">
+
+                        <img class="networks__img" src="./assets/img/vk.png" alt="vk"></a>
+                                    <a
+                                    href="#" class="networks__links">
+                                        <img class="networks__img" src="./assets/img/instagram.png" alt="instagram">
+                                        </a> <a href="#" class="networks__links">
+
+                        <img class="networks__img" src="./assets/img/Odnoklassniki.png" alt="odnoklassniki">
+
+                    </a>
+                                </div>
+                            </div>
+                            <!-- second -->
+                            <div class="col-xs-12 col-lg-3 my-column">
+                                <div class="field-with-icon white-phone"><a href="tel:+7 (3532) 452-255">+7 (3532) 452-255</a>
+
+                                </div>
+                                <div class="field-with-icon white-phone"><a href="tel:+7 (3532) 452-255">+7 (3532) 452-255</a>
+
+                                </div>
+                                <div class="adress">Адрес интернет-магазина:
+                                    <div class="adress__place">ул. Чкалова, 20</div>
+                                </div>
+                            </div>
+                            <!-- third -->
+                            <div class="col-xs-12 col-lg-3 my-column mobile-display-none">
+                                <div class="delivery">
+                                    <div class="delivery__tittle">ДОСТАВКА</div>
+                                    <ul>
+                                        <li class="delivery__items">Доставка от 350 рублей по городу.</li>
+                                        <li class="delivery__items">Стоимость автоматически добавляется к заказу при выборе варианта с доставкой</li>
+                                        <li
+                                        class="delivery__items">в течение 2-х часов или самовывозом</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- fourth -->
+                            <div class="col-xs-12 col-lg-3 my-column mobile-display-none">
+                                <div class="payment">
+                                    <div class="payment__tittle">ОПЛАТА</div>
+                                    <div class="payment__banks">
+                                        <img class="payment__img" src="./assets/img/banks.png" alt="">
+                                    </div>
+                                    <div class="payment__text">-оплата наличными при самовывозе</div>
+                                    <div class="payment__text">-оплата на карту Сбербанка 5469 0600 1815 0745</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+                <script src="js/all.js"></script>
+    </body>
+
+</html>

@@ -1,169 +1,227 @@
-
-
 body {
     background-color: $bg-color;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $white;
+    border-radius: 3px;
+    transition: $light;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $red;
+    border-radius: 3px;
+    height: 10px;
+    transition: $light;
+
+    &:hover {
+        background: $dark-red;
+    }
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    letter-spacing: 0.1em;
+    width: 1rem;
+    z-index: 1049;
+    border-radius: 1rem;
+    background-color: linear-gradient(to top, $red, $dark-red);
+    background-color: $red;
+
+    &:hover {
+        color: $dark-red;
+    }
+}
 
 .special-offer {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     margin-bottom: 1.5rem;
-   background-color: $green;
+    background-color: $green;
 
-@include text (Open Sans, 2.4rem, bold, $white, 2.4rem);
-letter-spacing: 0.205em;
+    @include text(Open Sans, 2.4rem, bold, $white, 2.4rem);
+    letter-spacing: 0.205em;
 
-  text-align: center;
-  box-shadow: 0px 0.5rem 3.1rem rgba(0, 0, 0, 0.4);
-  height: 6rem;
-  line-height: 6rem;
-  display: block;
-  }
+    text-align: center;
+    box-shadow: 0px 0.5rem 3.1rem rgba(0, 0, 0, 0.4);
+    height: 6rem;
+    line-height: 6rem;
+    display: block;
+}
 
-
-.to-close  {
+.to-close {
     float: right;
     margin-right: 2rem;
     line-height: 6rem;
+
     &:hover {
         text-shadow: 0 0 2rem rgba(255, 255, 255, 0.993);
-
     }
 }
 
 a {
-    color:$white;
+    color: $white;
     text-decoration: none;
+
     &:hover {
-        color: #eee;
+        color: inherit;
         text-decoration: none;
     }
-    
 }
 
 .information {
     margin: 1rem auto;
     width: 80%;
-    @include flex (flex, space-around, wrap);
+    @include flex(flex, space-around, wrap);
 
     &__logo {
         max-width: 26.8rem;
     }
 
     &__text {
-        @include text (Open Sans, 1.5rem, normal, $black, 1.9 rem);
+        @include text(Open Sans, 1.5rem, normal, $black, 1.9 rem);
         margin-top: 1rem;
         margin-bottom: 1rem;
-
     }
-
-    &__city:active {
-        background: orange;
-    }
-  
-  &__check-city{
-    border: none;
-    background: $bg-color;
-
-
-  }
 
     &__items {
-      
         &-bottom {
             display: flex;
         }
-         
+
+        a {
+            color: $red;
+
+            &:hover {
+                color: $dark-red;
+            }
+        }
     }
 
+    &__icons {
+        padding-left: 20px;
+        margin-right: 10px;
+        @include text(Open Sans, 2rem, bold, $red, 2.5 rem);
 
-&__icons {
-    padding-left: 20px;
-    margin-right: 10px;
-    @include text (Open Sans, 2rem, bold, $red, 2.5 rem);
+        a {
+            color: $red;
 
-    a{
-        color: $red;
+            &:hover {
+                color: $dark-red;
+            }
+        }
+
+        &-phone {
+            background: url("../assets/img/phone.png") no-repeat left;
+            background-size: 1.8rem;
+        }
+
+        &-basket {
+            background: url("../assets/img/basket.png") no-repeat 4px 4px;
+            background-size: 2rem;
+            margin-top: 1rem;
+
+            padding-left: 30px;
+            align-items: flex-end;
+            margin-top: 4rem;
+        }
+
+        &-city {
+            padding-left: 0;
+        }
+    }
+}
+
+.information__icons {
+    a:hover {
+        color: $dark-red;
+    }
+}
+
+.check-city-block {
+    margin-right: 1rem;
+}
+
+.check-city {
+    border: none;
+    background: $bg-color;
+    @include text(Open Sans, 2rem, bold, $red, 2.5 rem);
+    padding-left: 3rem;
+    background: url("../assets/img/city.png") no-repeat left;
+    background-size: 1.8rem;
+
+    &:focus {
+        outline: none;
     }
 
+    &--nav {
+        background: url("../assets/img/city-white.png") no-repeat left;
+        color: $white;
+    }
 
-&-phone {
-    background: url('../assets/img/phone.png') no-repeat left;
-    background-size: 1.8rem;
+    &__city {
+        text-align: right;
 
-}
-&-basket {
-    background: url('../assets/img/basket.png') no-repeat 4px 4px;
-    background-size: 2rem;
-    margin-top: 1rem;
-
-    padding-left: 30px;
-    align-items: flex-end;
-    margin-top: 4rem;
+        &--nav {
+            background-color: $red;
+        }
+    }
 }
 
-&-city {
-    background: url('../assets/img/city.png') no-repeat left;
-    background-size: 1.8rem;
+.my-nav {
+    &__city:active {
+        background: orange;
+    }
 
+    &__check-city {
+        border: none;
+        background: $red;
+        font-size: 2rem;
+        color: $white;
+        background: url("../assets/img/white-basket.png") no-repeat left;
+        background-size: 1.8rem;
+        padding-left: 2rem;
+    }
 
-}
-}
-}
-
-
-
-
-
-.my-nav{
-&__city:active {
-    background: orange;
-}
-
-&__check-city{
-border: none;
-background: $red;
-font-size: 2rem;
-color: $white;
-background: url('../assets/img/white-basket.png') no-repeat left;
-    background-size: 1.8rem;
-    padding-left: 2rem;
-
-}
-
-
-    @include text (Open Sans, 2rem, bold, $white, 4.4rem);
-    background-color: $red!important;
+    @include text(Open Sans, 2rem, bold, $white, 4.4rem);
+    background-color: $red !important;
     padding: 0;
     min-height: 6rem;
 
-    li{
+    li {
         transition: $light;
 
         padding: 0 0.5rem;
         margin-right: 7rem;
 
-    
-    &:hover {
-        background-color: $dark-red;
+        &:hover {
+            background-color: $dark-red;
         }
     }
 
-    .mobile-hide{
+    .mobile-hide {
         display: none;
     }
 
-    .no-border{
+    .no-border {
         border: none;
+        outline: none;
     }
 
-    .hidden-ul{
+    .hidden-ul {
         border-top: 1px $white solid;
         padding: 3rem 0;
     }
 
-    .little-margin{
+    .little-margin {
         margin-top: -0.6rem;
     }
-   
 }

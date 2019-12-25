@@ -1,15 +1,15 @@
-const gulp          = require('gulp');
-const gulpIf        = require('gulp-if');
-const browserSync   = require('browser-sync').create();
-const sass          = require('gulp-sass');
-const htmlmin       = require('gulp-htmlmin');
-const cssmin        = require('gulp-cssmin');
-const uglify        = require('gulp-uglify');
-const imagemin      = require('gulp-imagemin');
-const concat        = require('gulp-concat');
-const jsImport      = require('gulp-js-import');
-const sourcemaps    = require('gulp-sourcemaps');
-const htmlPartial   = require('gulp-html-partial');
+const gulp = require('gulp');
+const gulpIf = require('gulp-if');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const htmlmin = require('gulp-htmlmin');
+const cssmin = require('gulp-cssmin');
+const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
+const concat = require('gulp-concat');
+const jsImport = require('gulp-js-import');
+const sourcemaps = require('gulp-sourcemaps');
+const htmlPartial = require('gulp-html-partial');
 
 const isProd = process.env.NODE_ENV === 'prod';
 
@@ -22,21 +22,32 @@ const htmlFile = [
     'src/index.html',
     'src/catalog.html',
     'src/contacts.html',
-    'src/basket.html'
+    'src/basket.html',
+    'src/checkout.html',
+    'src/processed-order.html',
+    'src/changed-product.html'
+
+
 
 ]
 
 function html() {
     return gulp.src(htmlFile)
-        .pipe(htmlPartial({ basePath: 'src/partials/' }))
-        .pipe(gulpIf(isProd, htmlmin({ collapseWhitespace: true })))
-        .pipe(gulp.dest('dist'));  
+        .pipe(htmlPartial({
+            basePath: 'src/partials/'
+        }))
+        .pipe(gulpIf(isProd, htmlmin({
+            collapseWhitespace: true
+        })))
+        .pipe(gulp.dest('dist'));
 }
 
 function css() {
     return gulp.src('src/sass/style.scss')
         .pipe(gulpIf(!isProd, sourcemaps.init()))
-        .pipe(sass({ includePaths: ['node_modules'] }).on('error', sass.logError))
+        .pipe(sass({
+            includePaths: ['node_modules']
+        }).on('error', sass.logError))
         .pipe(gulpIf(!isProd, sourcemaps.write()))
         .pipe(gulpIf(isProd, cssmin()))
         .pipe(gulp.dest('dist/css/'));
@@ -44,7 +55,9 @@ function css() {
 
 function js() {
     return gulp.src('src/js/*.js')
-        .pipe(jsImport({hideConsole: true}))
+        .pipe(jsImport({
+            hideConsole: true
+        }))
         .pipe(concat('all.js'))
         .pipe(gulpIf(isProd, uglify()))
         .pipe(gulp.dest('dist/js'));

@@ -12,7 +12,6 @@
         line-height: 2.4rem;
         letter-spacing: 0;
         padding: 1rem 0;
-        margin-top: 30vh;
 
         &__width {
             width: 70%;
@@ -28,39 +27,55 @@
 
     .information {
         margin: 3rem 0;
+
+
+        &__logo {
+            max-width: 23.8rem;
+        }
+
+        &__items-mobile {
+            display: none;
+        }
+
+        &__items-bottom {
+            margin-top: -1rem;
+        }
+
+        &__icons-basket {
+            z-index: 4000;
+        }
     }
 
-    .information__logo {
-        max-width: 23.8rem;
+
+    .fixed {
+        position: fixed;
+        padding-right: 2rem;
+        padding-left: 4rem;
+        top: -2.5rem;
+        right: -2rem;
+
+        // right: -1.4rem;
+        z-index: 4000;
+        background-color: $red !important;
+        color: $white !important;
+        background: url(/assets/img/white-b.png) no-repeat 4px 4px;
+        background-size: 2rem;
+
+        a {
+            color: $white;
+        }
     }
 
-    .information__items-mobile {
-        display: none;
+    .box {
+        height: 5rem;
+        margin: .3rem 0 .7rem;
     }
 
-    .information__items-bottom {
-        margin-top: -1rem;
-    }
 
     h2 {
         font-size: 2.6rem;
     }
 
-    // .nav{
-    //     // height: 40vh;
-
-    //     &__links-menu {
-    //     display: block;
-    // }
-    // &__width{
-    //     display: block;
-    //     @include absolute (absolute, 0, 0, 2000);
-    //     background-color: $red;
-    // }
-
-
-    // }
-    // }
 
     .hidden-ul {
         display: inline-flex;
@@ -77,10 +92,15 @@
     .display-block {
         display: block;
         font-size: 1.8rem;
+        line-height: 2.5rem;
     }
 
     .relative-for-card {
         height: 40rem;
+    }
+
+    .rose-card__wrap {
+        width: 85%;
     }
 
     .indent {
@@ -88,23 +108,42 @@
     }
 
     .comment {
-        max-width: 100%;
+        max-width: 80%;
+        margin: 2rem auto;
+        border: 0;
+        padding: 2rem;
     }
 
-    .all-comments__my-button {
-        padding: 1.8rem 7rem;
+
+    .carousel-control-prev {
+        left: 0;
+        display: flex;
     }
+
+    .carousel-control-next {
+        right: 0;
+        display: flex;
+
+    }
+
+    .carousel-comments {
+        height: 37rem;
+        overflow: hidden;
+    }
+
 
     .advantage-card {
         max-width: 100%;
-        margin-bottom: 5rem;
+        border: 0;
+        padding-bottom: 0;
+        min-height: 32.9rem;
     }
 
 
 
     .my-column {
         width: 100%;
-        max-width: 27.4rem;
+        max-width: 29.4rem;
     }
 
     .field-with-icon {
@@ -140,7 +179,6 @@
     }
 
     .footer {
-        margin-top: 0;
         padding-bottom: 4rem;
     }
 
@@ -156,7 +194,185 @@
         display: none;
     }
 
+    .basket,
+    .delivery-tittle {
+        text-align: center;
+    }
+
     td {
         display: block;
     }
+
+    .my-form__my-form-control,
+    .my-second-form__control {
+        font-size: 1.8rem;
+    }
+
+    .card-contact {
+        display: block;
+        margin: 0 auto;
+        margin: 2rem 0;
+
+        &__img {
+            margin-bottom: 1rem;
+        }
+
+        &__text {
+            line-height: 2rem;
+        }
+
+        .bloc {
+            display: flex;
+            justify-content: center;
+            line-height: 2rem;
+            margin: 1rem 0;
+
+            .bold {
+                display: inline-block;
+            }
+        }
+
+    }
+
+    .my-form {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+
+
+    // ..............checkout.html..................................///
+
+    h3 {
+        font-size: 2.6rem;
+        text-align: center;
+    }
+
+    .block-inline {
+        display: block;
+    }
+
+    // ...........basket.html............................................/
+
+    .my-underline-row {
+        display: block;
+        text-align: center;
+        padding-bottom: 0;
+        position: relative;
+        font-size: 2.5rem;
+
+    }
+
+
+
+    .price-for-products-wrap {
+        justify-content: center;
+
+
+    }
+
+    .price-for-products {
+        font-size: 2rem;
+    }
+
+    .button-box-right {
+        justify-content: center;
+
+
+    }
+
+    .services {
+        margin: -1.5rem auto;
+
+        &__label {
+            font-size: 1.5rem;
+        }
+
+    }
+
+    .checkout__block {
+        padding-right: 2rem;
+    }
+
+    .basket-product {
+        display: block;
+
+        padding: 2rem 0;
+        font-size: 2.5rem;
+
+        &__text {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        &__price {
+            padding: 1rem 0;
+
+        }
+
+        &__number {
+            &--no-stricks {
+                padding-left: 0;
+            }
+
+            &:before {
+                margin-left: 0;
+            }
+        }
+
+        &__all-price {
+            padding: 1rem 0;
+
+        }
+
+        &__close {
+            position: absolute;
+            top: 3.5rem;
+            right: 3rem;
+            z-index: 2;
+            font-size: 6rem;
+        }
+    }
+
+
+
+    th {
+        display: flex;
+        justify-content: center;
+    }
+
+    .payment-box__block {
+        margin: 2rem;
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    .delivery-box {
+        display: block;
+        padding: 0;
+    }
+
+    // ........................................................../
+    .information-field {
+        font-size: 1.8rem;
+        text-align: center;
+
+        .bold {
+            display: inline;
+        }
+    }
+
+    // ///////////////////////////////////////////////////
+    .changed-product {
+        width: 100%;
+    }
+
+    .inf-product {
+        width: 90%;
+        margin: 2rem auto;
+    }
+
+    // ////////////////////////////////////////////////////
+
 }

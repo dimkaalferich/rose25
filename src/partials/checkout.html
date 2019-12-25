@@ -1,0 +1,144 @@
+<div class="checkout-box">
+    <h3>ОФОРМЛЕНИЕ ЗАКАЗА</h3>
+
+
+    <table class="table my-table">
+        <thead>
+            <tr class="my-row">
+                <th scope="col">Товары</th>
+                <th scope="col">Цена</th>
+                <th scope="col">Колличество</th>
+                <th scope="col">сумма</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="container">
+            <partial src="basket-product-booked.html"></partial>
+            <partial src="basket-product-booked.html"></partial>
+
+            <tr class=" my-underline-row delivery-box">
+                <th scope="row display-inline-block">
+                    <div class="delivery __text"> Доставка</div>
+                </th>
+                <td class="display-none"></td>
+                <td class="display-none"></td>
+                <td>
+                    <div class="delivery __text">
+                        250р</div>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="price-for-products-wrap">
+        <div class="price-for-products">Общая стоимость заказа:
+            <div class="price-for-products__bold">11500р.</div>
+        </div>
+    </div>
+
+    <form action="processed-order.html" class="my-second-form">
+        <h4>Данные покупателя:</h4>
+
+        <div class="row">
+            <div class="col">
+                <label for="InputNameBuyer"></label>
+
+                <input type="text" class="form-control my-second-form__control" id="InputNameBuyer" placeholder="Имя">
+            </div>
+            <div class="col">
+                <label for="InputNumberBuyer"></label>
+                <input type="tel" class="form-control my-second-form__control" id="InputNumberBuyer"
+                    placeholder="Номер телефона">
+            </div>
+        </div>
+
+        <h4>Данные получателя:</h4>
+
+        <div class="row">
+            <div class="col">
+                <label for="InputNameRecipient"></label>
+
+                <input type="text" class="form-control my-second-form__control" id="InputNameRecipient"
+                    placeholder="Имя">
+            </div>
+            <div class="col">
+                <label for="InputNumberRecipient"></label>
+                <input type="tel" class="form-control my-second-form__control" id="InputNumberRecipient"
+                    placeholder="Номер телефона">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="InputAdress"></label>
+            <input type="text" class="form-control my-second-form__control" id="InputAdress"
+                aria-describedby="numberHelp" placeholder="Адрес доставки">
+        </div>
+
+        <div class="form-group">
+            <label for="InputComment"></label>
+            <textarea type="text" class="form-control my-second-form__control" id="InputComment" rows="3"
+                placeholder="Комментарий к заказу"></textarea>
+        </div>
+
+        <div class="payment-box">
+            <div class="payment-box__block">
+                <div class="payment-box__text">Оплата:</div>
+                <div class="payment-box__radio-block">
+                    <div class="form-check payment-box__line">
+                        <label class="form-check-label checkout__label" for="RadiosMoney1">
+
+                            <input class="form-check-input" type="radio" name="Radios" id="RadiosMoney1" value="option1"
+                                checked>
+                            <div class="custom-radio"></div>
+                            Наличными при самовывозе
+                        </label>
+                    </div>
+                    <div class="form-check payment-box__line">
+                        <label class="form-check-label checkout__label" for="RadiosMoney2">
+
+                            <input class="form-check-input" type="radio" name="Radios" id="RadiosMoney2"
+                                value="option1">
+                            <div class="custom-radio"></div>
+
+                            Наличными при получении
+                        </label>
+                    </div>
+                    <div class="form-check payment-box__line">
+                        <label class="form-check-label checkout__label" for="RadiosMoney3">
+
+                            <input class="form-check-input" type="radio" name="Radios" id="RadiosMoney3"
+                                value="option1">
+                            <div class="custom-radio"></div>
+
+                            Банковской картой
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-box__block ">
+                <div class="payment-box__text">Введите UDS-код</div>
+                <div class="block-inline">
+                    <label for="InputCode"></label>
+
+                    <input type="text" class="form-control my-second-form__control code" id="InputCode"
+                        placeholder="Код">
+                    <div class="button-box">
+                        <button class="payment-box__button">ПОЛУЧИТЬ КОД</button>
+
+                        <a href="#" class="payment-box__question">?</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="price-for-products-wrap">
+            <div class="price-for-products">Итого к оплате:
+                <div class="price-for-products__bold">11500р.</div>
+            </div>
+        </div>
+        <div class="button-box-right">
+            <button type="submit" class="btn my-button">ОФОРМИТЬ ЗАКАЗ</button>
+        </div>
+    </form>
+</div>

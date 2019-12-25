@@ -1,0 +1,63 @@
+.processed-order {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.information-field {
+    margin: 2rem;
+    @include text(Open Sans, 2.4rem, normal, $black, 2.4rem);
+
+    .bold {
+        font-weight: bold;
+        margin-left: 1rem;
+    }
+
+
+}
+
+// ..............................catalog,html............................./////@extend
+
+.links-box {
+    margin: 9rem 2rem 0;
+    display: flex;
+    justify-content: flex-end;
+    @include text(Open Sans, 2.8rem, normal, $red, 2.8rem);
+
+
+
+}
+
+.links-slide {
+    border: 1px solid $red;
+    color: $red;
+    padding: 0 .7rem;
+
+    &:hover {
+        color: $dark-red;
+        border-color: $dark-red;
+    }
+
+    &--img {
+        border: none;
+
+    }
+
+
+    &__img {
+        width: 2.2rem;
+        height: 3.3rem;
+        margin-bottom: .5rem;
+
+    }
+
+
+    &--active {
+        background-color: $red;
+        color: $white;
+
+        &:hover {
+            color: $white;
+            background-color: $dark-red;
+        }
+    }
+}

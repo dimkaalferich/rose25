@@ -7,85 +7,163 @@
     height: 100%;
 
 
-    
-
-&__wrap {
-    padding: 1.3rem 0;
-    transition: $light;
-    background: $bg-color;
-    text-align: center;
-    box-sizing: border-box;
-    border: none;
-    width: 31rem;
-    margin: 0 auto;
-    width: 100%;
 
 
-}
-&__hover-content{
-    transition: $light;
-    padding-top: 1rem;
-    display: none;
-}
-&__box {
-    padding: 0;
+    &__wrap {
+        padding: 1.3rem 0;
+        transition: $light;
+        background: $bg-color;
+        text-align: center;
+        box-sizing: border-box;
+        border: none;
+        width: 31rem;
+        margin: 0 auto;
+        width: 100%;
 
-}
-&__img{
-    width: 31rem;
-    height: 30rem;
-    margin: 0 auto;
-}
 
-&__number{
-    @include text (Open-Sans, 2rem, normal, $my-black, 2rem);
-    margin-top: 1rem;
-}
+    }
 
-&__price{
-    @include text (Open-Sans, 2.4rem, normal, $black, 2.4rem);
-    margin: 1rem 0;
-    padding-bottom: 1rem;
-    
-}
-&__booking {
-   
-    @include text (Open-Sans, 2.2rem, normal, $red, 2.2rem);
-    letter-spacing: 0.1em;
-    border-radius: 0;
-    padding: 1rem 8.5rem;
-    border: 2px solid $red;
+    &__hover-content {
+        transition: $light;
+        padding-top: 1rem;
+        display: none;
+    }
 
-    &:hover{
-        color: $bg-color;
-        background-color: $red;
+    &__box {
+        padding: 0;
+
+    }
+
+    &__img {
+        width: 31rem;
+        height: 30rem;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__number {
+        @include text (Open-Sans, 2rem, normal, $my-black, 2rem);
+        margin-top: 1rem;
+    }
+
+    &__price {
+        @include text (Open-Sans, 2.4rem, normal, $black, 2.4rem);
+        margin: 1rem 0;
+        padding-bottom: 1rem;
+
+    }
+
+    &__booking {
+
+        @include text (Open-Sans, 2.2rem, normal, $red, 2.2rem);
+        letter-spacing: 0.1em;
         border-radius: 0;
+        padding: 1rem 8.5rem;
+        border: 2px solid $red;
+        transition: $light;
+
+        &:hover {
+            color: $bg-color;
+            background-color: $red;
+            border-radius: 0;
+
+        }
 
     }
 
-}
-&__description{
-    @include text (Open-Sans, 1.8rem, normal, $red, 1.8rem);
-    letter-spacing: 0.1em;
-    margin: 2.5rem 0 0;
-}
+    &__description {
+        @include text (Open-Sans, 1.8rem, normal, $red, 1.8rem);
+        letter-spacing: 0.1em;
+        margin: 2.5rem 0 0;
 
-&:hover {
-    @include absolute (absolute, 0, 0, 1);
-
-    .rose-card__wrap {
-        background-color: $white;
-        box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.3);
-
-    
+        &:hover {
+            color: $dark-red;
+        }
     }
-    .rose-card__hover-content {
-        display: block;
-    }
-    
 
+    &:hover {
+        @include absolute (absolute, 0, 0, 1);
+
+        .rose-card__wrap {
+            background-color: $white;
+            box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.3);
+
+
+        }
+
+        .rose-card__hover-content {
+            display: block;
+        }
+
+
+    }
 }
-}
-.relative-for-card{
+
+.relative-for-card {
     position: relative;
+}
+
+.sale {
+    width: 100%;
+    background-color: blue;
+    @include text (Open Sans, 2.4rem, 600, $white, 3.8rem);
+    text-transform: uppercase;
+    @include absolute (absolute, 0, 65%, 100);
+}
+
+.best-price {
+    background-color: $pink;
+}
+
+.new {
+    background-color: $light-green;
+}
+
+// ......................modal window.............................///////////////////////
+
+.my-modal {
+
+    width: 90%;
+    margin: 0 auto;
+
+    &__inf {
+        @include text (Open-Sans, 1.8rem, normal, $my-black, 2.5rem);
+        letter-spacing: .1em;
+        text-align: center;
+    }
+
+
+    &__tittle {
+        text-align: center;
+        margin: 4rem 0 3rem;
+        @include text (Open-Sans, 3.6rem, normal, $red, 3.6rem);
+        text-transform: uppercase;
+    }
+
+
+
+}
+
+.modal-form {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.button-box-center {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 5rem;
+}
+
+
+
+.close {
+    color: $red;
+    opacity: 1;
+    font-size: 3rem;
+
+    &:hover {
+        color: $dark-red;
+    }
 }
